@@ -35,7 +35,7 @@ namespace StandardStorage
         {
             await AsynchronityUtilities.SwitchOffMainThreadAsync(cancellationToken);
 
-            if (!System.IO.File.Exists(Path)) throw new FileNotFoundException("File does not exist: " + Path);
+            if (!System.IO.File.Exists(Path)) throw new System.IO.FileNotFoundException("File does not exist: " + Path);
 
             System.IO.File.Delete(Path);
         }
@@ -92,14 +92,13 @@ namespace StandardStorage
         public async Task<Stream> OpenAsync(FileAccess fileAccess, CancellationToken cancellationToken = default(CancellationToken))
         {
             await AsynchronityUtilities.SwitchOffMainThreadAsync(cancellationToken);
-
             switch (fileAccess)
             {
                 case FileAccess.Read:
                     return System.IO.File.OpenRead(Path);
 
-                case FileAccess.ReadAndWrite:
-                    return System.IO.File.Open(Path, FileMode.Open, System.IO.FileAccess.ReadWrite);
+                case FileAccess.ReadWrite:
+                    return System.IO.File.Open(Path, FileMode.Open, FileAccess.ReadWrite);
             }
             throw new ArgumentException("Unrecognized FileAccess value: " + fileAccess);
         }

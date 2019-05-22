@@ -187,7 +187,7 @@ namespace StandardStorage.Test
             await file.DeleteAsync();
 
             //	Act & Assert
-            await Assert.ThrowsExceptionAsync<FileNotFoundException>(async () => { await file.OpenAsync(FileAccess.ReadAndWrite); });
+            await Assert.ThrowsExceptionAsync<FileNotFoundException>(async () => { await file.OpenAsync(FileAccess.ReadWrite); });
         }
 
         [TestMethod]
@@ -234,7 +234,7 @@ namespace StandardStorage.Test
             IFile file = await folder.CreateFileAsync(fileName, CreationCollisionOption.FailIfExists);
 
             //  Act
-            using (Stream stream = await file.OpenAsync(FileAccess.ReadAndWrite))
+            using (Stream stream = await file.OpenAsync(FileAccess.ReadWrite))
             {
 
                 //  Assert

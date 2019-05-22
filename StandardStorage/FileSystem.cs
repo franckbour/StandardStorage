@@ -20,12 +20,12 @@ namespace StandardStorage
         /// <summary>
         /// A folder representing storage which is local to the current device
         /// </summary>
-        public IFolder LocalStorage => new Folder(Directory.CreateDirectory(Path.GetFullPath(StorageUtilities.GetAppSpecificStoragePathFromBasePath(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)))).FullName);
+        public IFolder LocalStorage => new Folder(Directory.CreateDirectory(Path.GetFullPath(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData))).FullName);
 
         /// <summary>
         /// A folder representing storage which may be synced with other devices for the same user
         /// </summary>
-        public IFolder RoamingStorage => new Folder(Directory.CreateDirectory(Path.GetFullPath(StorageUtilities.GetAppSpecificStoragePathFromBasePath(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)))).FullName);
+        public IFolder RoamingStorage => new Folder(Directory.CreateDirectory(Path.GetFullPath(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData))).FullName);
 
         /// <summary>
         /// Gets a file, given its path.  Returns null if the file does not exist.

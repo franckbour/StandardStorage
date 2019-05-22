@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StandardStorage", "StandardStorage\StandardStorage.csproj", "{5F6EB753-F884-4609-9C43-00BDD0E1DECD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardStorage.Test", "StandardStorage.Test\StandardStorage.Test.csproj", "{26AB4463-2469-4D91-AAF9-BFD2FC2FBB7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StandardStorage.Test", "StandardStorage.Test\StandardStorage.Test.csproj", "{26AB4463-2469-4D91-AAF9-BFD2FC2FBB7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

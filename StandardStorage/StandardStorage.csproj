@@ -1,24 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageId>StandardStorage</PackageId>
-    <PackageVersion>0.1.0</PackageVersion>
-    <Authors>TheFanatr</Authors>
-    <Description>A reimplementation of PCLStorage that keeps 100% of the publicly-accessible API, and is contained in only one .NET Standard assembly that does not rely on any external framework code.</Description>
+    <PackageId>FB.StandardStorage</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Owners>Franck Bour</Owners>
+    <Authors>Franck Bour</Authors>
+    <Title>FB.StandardStorage</Title>
+    <Summary>Cross-platform Storage APIs for .NET Standard applications.</Summary>
+    <Description>Cross-platform Storage APIs for .NET Standard applications.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>First major release after GitHub repository creation</PackageReleaseNotes>
-    <Copyright>Copyright 2018 © Alex Fanat. All rights reserved.</Copyright>
-    <PackageTags>PCLStorage;portable;portable storage;netstandard;netstandard storage;PCL;standard;universal;cache;caching;AppData;data</PackageTags>
-    <PackageProjectUrl>https://github.com/TheFanatr/StandardStorage</PackageProjectUrl>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <Copyright>Copyright 2019</Copyright>
+    <PackageTags>portable storage;netstandard;xamarin;xamarin.forms;windows;android;ios;plugin</PackageTags>
+    <PackageProjectUrl>https://github.com/franckbour/StandardStorage</PackageProjectUrl>
+    <Product>FB.StandardStorage</Product>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>bin\Release\netstandard2.0\StandardStorage.xml</DocumentationFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="System.Security.Permissions" Version="4.4.1" />
-  </ItemGroup>
 
 </Project>

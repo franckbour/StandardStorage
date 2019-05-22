@@ -28,7 +28,7 @@ namespace StandardStorage
         /// <returns>A task which completes when the write operation finishes</returns>
         public static async Task WriteAllTextAsync(this IFile file, string contents)
         {
-            using (Stream stream = await file.OpenAsync(FileAccess.ReadAndWrite).ConfigureAwait(false))
+            using (Stream stream = await file.OpenAsync(FileAccess.ReadWrite).ConfigureAwait(false))
             {
                 stream.SetLength(0);
                 using (StreamWriter sw = new StreamWriter(stream))
